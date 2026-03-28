@@ -5,3 +5,9 @@ todo_list = [x1, x2, x3, "Hello"]
 print(todo_list)
 
 print(type(todo_list))
+
+def counting_chars():
+    userip = input("Enter title:\n")
+    return len(userip)
+
+print(counting_chars())
