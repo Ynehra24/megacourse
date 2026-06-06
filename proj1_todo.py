@@ -1,8 +1,21 @@
 todo = []
 while True:
-    todo_element = input("Enter a task or done to finish: ")
-    if(todo_element == "exit"):
-        break
-    todo.append(todo_element)
+    todo_element = input("Enter an action(add/show/completed/exit): ")
+    match todo_element:
+        case "add":
+            elem = input("Enter the item: ")
+            todo.append(elem)
+        case "show":
+            print(todo)
+        case "completed":
+            inp = input("Which task did you finish? ")
+            if inp in todo:
+                todo.remove(inp)
+                print("You have completed task ", inp)
+            else:
+                print("Error: Task not found")
 
-print("Today's list ", todo)
+        case "exit":
+            break
+
+print("Remaining list ", todo)
