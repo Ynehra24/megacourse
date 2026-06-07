@@ -4,9 +4,11 @@ while True:
     match todo_element:
         case "add":
             elem = input("Enter the item: ")
+            elem.strip()
             todo.append(elem)
         case "show":
-            print(todo)
+            for elem in todo:
+                print(elem)
         case "completed":
             inp = input("Which task did you finish? ")
             if inp in todo:
