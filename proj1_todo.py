@@ -10,12 +10,10 @@ while True:
             for ind, elem in enumerate(todo):
                 print(ind + 1, '.', elem)
         case "completed":
-            inp = input("Which task did you finish? ")
-            if inp in todo:
-                todo.remove(inp)
-                print("You have completed task ", inp)
-            else:
-                print("Error: Task not found")
+            inp = int(input("Which task did you finish? "))
+            actualinp = inp -1
+            todo.remove(inp)
+            print("You have completed task ", inp)
         case "edit":
             num = int(input("Which To-do iteam would you like to edit? "))
             if(num < len(todo)):
