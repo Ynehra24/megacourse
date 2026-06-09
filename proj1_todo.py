@@ -8,11 +8,10 @@ while True:
             todo.append(elem)
         case "show":
             for ind, elem in enumerate(todo):
-                print(ind + 1, '.', elem)
+                print(f"{ind + 1}. {elem}")
         case "completed":
             inp = int(input("Which task did you finish? "))
-            actualinp = inp -1
-            todo.remove(inp)
+            todo.pop(inp - 1)
             print("You have completed task ", inp)
         case "edit":
             num = int(input("Which To-do iteam would you like to edit? "))
